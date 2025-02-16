@@ -34,7 +34,7 @@ CREATE TABLE Estado_civil(
 );
 
 CREATE TABLE Persona(
-	cui INT NOT NULL PRIMARY KEY,
+	cui INT NOT NULL UNIQUE PRIMARY KEY,
 	primer_nombre VARCHAR(200) NOT NULL, 
 	segundo_nombre VARCHAR(200), 
 	tercer_nombre VARCHAR(200),
@@ -52,6 +52,17 @@ CREATE TABLE Persona(
 );
 
 -- informacion de documentos 
+-- DPI
+
+-- acta nacimiento
+CREATE TABLE Dpi (
+    id_persona INT NOT NULL,
+    fecha_vencimiento DATE NOT NULL,
+    numero_serie INT NOT NULL,
+    PRIMARY KEY (id_persona),  
+    FOREIGN KEY (id_persona) REFERENCES Persona(cui)  
+);
+
 
 -- acta nacimiento
 CREATE TABLE Acta_nacimiento(
@@ -143,7 +154,7 @@ CREATE TABLE Obtener_documento(
 );
 
 -- determina el tipo de documento a pagar
-CREATE TABLE nacimiento_obtencion_documento(
+CREATE TABLE Nacimiento_obtencion_documento(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	id_acta_nacimiento INT NOT NULL,
 	id_pago_obtencion_documento INT NOT NULL,
@@ -151,7 +162,7 @@ CREATE TABLE nacimiento_obtencion_documento(
 	FOREIGN KEY (id_pago_obtencion_documento) REFERENCES Obtener_documento(id)
 );
 
-CREATE TABLE defuncion_obtencion_documento(
+CREATE TABLE Defuncion_obtencion_documento(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	id_acta_defuncion INT NOT NULL,
 	id_pago_obtencion_documento INT NOT NULL,
@@ -159,7 +170,7 @@ CREATE TABLE defuncion_obtencion_documento(
 	FOREIGN KEY (id_pago_obtencion_documento) REFERENCES Obtener_documento(id)
 );
 
-CREATE TABLE matrimonio_obtencion_documento(
+CREATE TABLE Matrimonio_obtencion_documento(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	id_acta_matrimonio INT NOT NULL,
 	id_pago_obtencion_documento INT NOT NULL,
@@ -167,10 +178,20 @@ CREATE TABLE matrimonio_obtencion_documento(
 	FOREIGN KEY (id_pago_obtencion_documento) REFERENCES Obtener_documento(id)
 );
 
-CREATE TABLE divorcio_obtencion_documento(
+CREATE TABLE Divorcio_obtencion_documento(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	id_acta_divorcio INT NOT NULL,
 	id_pago_obtencion_documento INT NOT NULL,
 	FOREIGN KEY (id_acta_divorcio) REFERENCES Acta_divorcio(id), 
 	FOREIGN KEY (id_pago_obtencion_documento) REFERENCES Obtener_documento(id)
 );
+
+
+CREATE TABLE Dpi_obtencion_documento (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_persona INT NOT NULL,
+    id_pago_obtencion_documento INT NOT NULL,
+    FOREIGN KEY (id_persona) REFERENCES Dpi(id_persona),
+    FOREIGN KEY (id_pago_obtencion_documento) REFERENCES Obtener_documento(id)
+);
+
