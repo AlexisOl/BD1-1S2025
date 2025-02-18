@@ -34,7 +34,7 @@ CREATE TABLE Estado_civil(
 );
 
 CREATE TABLE Persona(
-	cui INT NOT NULL UNIQUE PRIMARY KEY,
+	cui INT NOT NULL PRIMARY KEY,
 	primer_nombre VARCHAR(200) NOT NULL, 
 	segundo_nombre VARCHAR(200), 
 	tercer_nombre VARCHAR(200),
