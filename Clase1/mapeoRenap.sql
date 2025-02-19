@@ -34,7 +34,11 @@ CREATE TABLE Estado_civil(
 );
 
 CREATE TABLE Persona(
+<<<<<<< HEAD
 	cui INT NOT NULL  PRIMARY KEY,
+=======
+	cui INT NOT NULL PRIMARY KEY,
+>>>>>>> refs/remotes/origin/main
 	primer_nombre VARCHAR(200) NOT NULL, 
 	segundo_nombre VARCHAR(200), 
 	tercer_nombre VARCHAR(200),
