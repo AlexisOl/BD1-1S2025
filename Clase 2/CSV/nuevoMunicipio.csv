@@ -1,0 +1,341 @@
+,id,nombre,nombreDepa
+0,1,Guatemala,Guatemala
+1,2,Santa Catarina Pinula,Guatemala
+2,3,San Jose Pinula,Guatemala
+3,4,San Jose Del Golfo,Guatemala
+4,5,Palencia,Guatemala
+5,6,Chinautla,Guatemala
+6,7,San Pedro Ayampuc,Guatemala
+7,8,Mixco,Guatemala
+8,9,San Pedro Sacatepequez,Guatemala
+9,10,San Juan Sacatepequez,Guatemala
+10,11,San Raymundo,Guatemala
+11,12,Chuarrancho,Guatemala
+12,13,Fraijanes,Guatemala
+13,14,Amatitlan,Guatemala
+14,15,Villa Nueva,Guatemala
+15,16,Villa Canales,Guatemala
+16,17,Petapa,Guatemala
+17,18,Guastatoya,El Progreso
+18,19,Morazan,El Progreso
+19,20,San Agustin Acasaguastlan,El Progreso
+20,21,San Cristobal Acasaguastlan,El Progreso
+21,22,El Jicaro,El Progreso
+22,23,Sansare,El Progreso
+23,24,Sanarate,El Progreso
+24,25,San Antonio La Paz,El Progreso
+25,26,Antigua Guatemala,Sacatepequez
+26,27,Jocotenango,Sacatepequez
+27,28,Pastores,Sacatepequez
+28,29,Sumpango,Sacatepequez
+29,30,Santo Domingo Xenacoj,Sacatepequez
+30,31,Santiago Sacatepequez,Sacatepequez
+31,32,San Bartolome Milpas Altas,Sacatepequez
+32,33,San Lucas Sacatepequez,Sacatepequez
+33,34,Santa Lucia Milpas Altas,Sacatepequez
+34,35,Magdalena Milpas Altas,Sacatepequez
+35,36,Santa Maria De Jesus,Sacatepequez
+36,37,Ciudad Vieja,Sacatepequez
+37,38,San Miguel Dueñas,Sacatepequez
+38,39,Alotenango,Sacatepequez
+39,40,San Antonio Aguas Calientes,Sacatepequez
+40,41,Santa Catarina Barahona,Sacatepequez
+41,42,Chimaltenango,Chimaltenango
+42,43,San Jose Poaquil,Chimaltenango
+43,44,San Martin Jilotepeque,Chimaltenango
+44,45,Comalapa,Chimaltenango
+45,46,Santa Apolonia,Chimaltenango
+46,47,Tecpan Guatemala,Chimaltenango
+47,48,Patzun,Chimaltenango
+48,49,Pochuta,Chimaltenango
+49,50,Patzicia,Chimaltenango
+50,51,Santa Cruz Balanya,Chimaltenango
+51,52,Acatenango,Chimaltenango
+52,53,San Pedro Yepocapa,Chimaltenango
+53,54,San Andres Itzapa,Chimaltenango
+54,55,Parramos,Chimaltenango
+55,56,Zaragoza,Chimaltenango
+56,57,El Tejar,Chimaltenango
+57,58,Escuintla,Escuintla
+58,59,Santa Lucia Cotzumalguapa,Escuintla
+59,60,La Democracia,Escuintla
+60,61,Siquinala,Escuintla
+61,62,Masagua,Escuintla
+62,63,Tiquisate,Escuintla
+63,64,La Gomera,Escuintla
+64,65,Guanagazapa,Escuintla
+65,66,San Jose,Escuintla
+66,67,Iztapa,Escuintla
+67,68,Palin,Escuintla
+68,69,San Vicente Pacaya,Escuintla
+69,70,Nueva Concepcion,Escuintla
+70,71,Sipacate,Escuintla
+71,72,Cuilapa,Santa Rosa
+72,73,Barberena,Santa Rosa
+73,74,Santa Rosa De Lima,Santa Rosa
+74,75,Casillas,Santa Rosa
+75,76,San Rafael Las Flores,Santa Rosa
+76,77,Oratorio,Santa Rosa
+77,78,San Juan Tecuaco,Santa Rosa
+78,79,Chiquimulilla,Santa Rosa
+79,80,Taxisco,Santa Rosa
+80,81,Santa Maria Ixhuatan,Santa Rosa
+81,82,Guazacapan,Santa Rosa
+82,83,Santa Cruz Naranjo,Santa Rosa
+83,84,Pueblo Nuevo Viñas,Santa Rosa
+84,85,Nueva Santa Rosa,Santa Rosa
+85,86,Solola,Solola
+86,87,San Jose Chacaya,Solola
+87,88,Santa Maria Visitacion,Solola
+88,89,Santa Lucia Utatlan,Solola
+89,90,Nahuala,Solola
+90,91,Santa Catarina Ixtahuacan,Solola
+91,92,Santa Clara La Laguna,Solola
+92,93,Concepcion,Solola
+93,94,San Andres Semetabaj,Solola
+94,95,Panajachel,Solola
+95,96,Santa Catarina Palopo,Solola
+96,97,San Antonio Palopo,Solola
+97,98,San Lucas Toliman,Solola
+98,99,Santa Cruz La Laguna,Solola
+99,100,San Pablo La Laguna,Solola
+100,101,San Marcos La Laguna,Solola
+101,102,San Juan La Laguna,Solola
+102,103,San Pedro La Laguna,Solola
+103,104,Santiago Atitlan,Solola
+104,105,Totonicapan,Totonicapan
+105,106,San Cristobal Totonicapan,Totonicapan
+106,107,San Francisco El Alto,Totonicapan
+107,108,San Andres Xecul,Totonicapan
+108,109,Momostenango,Totonicapan
+109,110,Santa Maria Chiquimula,Totonicapan
+110,111,Santa Lucia La Reforma,Totonicapan
+111,112,San Bartolo Aguas Calientes,Totonicapan
+112,113,Quetzaltenango,Quetzaltenango
+113,114,Salcaja,Quetzaltenango
+114,115,Olintepeque,Quetzaltenango
+115,116,San Carlos Sija,Quetzaltenango
+116,117,Sibilia,Quetzaltenango
+117,118,Cabrican,Quetzaltenango
+118,119,Cajola,Quetzaltenango
+119,120,San Miguel Siguila,Quetzaltenango
+120,121,San Juan Ostuncalco,Quetzaltenango
+121,122,San Mateo,Quetzaltenango
+122,123,Concepcion Chiquirichapa,Quetzaltenango
+123,124,San Martin Sacatepequez,Quetzaltenango
+124,125,Almolonga,Quetzaltenango
+125,126,Cantel,Quetzaltenango
+126,127,Huitan,Quetzaltenango
+127,128,Zunil,Quetzaltenango
+128,129,Colomba,Quetzaltenango
+129,130,San Francisco La Union,Quetzaltenango
+130,131,El Palmar,Quetzaltenango
+131,132,Coatepeque,Quetzaltenango
+132,133,Genova,Quetzaltenango
+133,134,Flores Costa Cuca,Quetzaltenango
+134,135,La Esperanza,Quetzaltenango
+135,136,Palestina De Los Altos,Quetzaltenango
+136,137,Mazatenango,Suchitepequez
+137,138,Cuyotenango,Suchitepequez
+138,139,San Francisco Zapotitlan,Suchitepequez
+139,140,San Bernardino,Suchitepequez
+140,141,San Jose El Idolo,Suchitepequez
+141,142,Santo Domingo Suchitepequez,Suchitepequez
+142,143,San Lorenzo,Suchitepequez
+143,144,Samayac,Suchitepequez
+144,145,San Pablo Jocopilas,Suchitepequez
+145,146,San Antonio Suchitepequez,Suchitepequez
+146,147,San Miguel Panan,Suchitepequez
+147,148,San Gabriel,Suchitepequez
+148,149,Chicacao,Suchitepequez
+149,150,Patulul,Suchitepequez
+150,151,Santa Barbara,Suchitepequez
+151,152,San Juan Bautista,Suchitepequez
+152,153,Santo Tomas La Union,Suchitepequez
+153,154,Zunilito,Suchitepequez
+154,155,Pueblo Nuevo,Suchitepequez
+155,156,Rio Bravo,Suchitepequez
+156,157,San Jose La Maquina,Suchitepequez
+157,158,Retalhuleu,Retalhuleu
+158,159,San Sebastian,Retalhuleu
+159,160,Santa Cruz Mulua,Retalhuleu
+160,161,San Martin Zapotitlan,Retalhuleu
+161,162,San Felipe,Retalhuleu
+162,163,San Andres Villa Seca,Retalhuleu
+163,164,Champerico,Retalhuleu
+164,165,Nuevo San Carlos,Retalhuleu
+165,166,El Asintal,Retalhuleu
+166,167,San Marcos,San Marcos
+167,168,San Pedro Sacatepequez,San Marcos
+168,169,San Antonio Sacatepequez,San Marcos
+169,170,Comitancillo,San Marcos
+170,171,San Miguel Ixtahuacan,San Marcos
+171,172,Concepcion Tutuapa,San Marcos
+172,173,Tacana,San Marcos
+173,174,Sibinal,San Marcos
+174,175,Tajumulco,San Marcos
+175,176,Tejutla,San Marcos
+176,177,San Rafael Pie De La Cuesta,San Marcos
+177,178,Nuevo Progreso,San Marcos
+178,179,El Tumbador,San Marcos
+179,180,El Rodeo,San Marcos
+180,181,Malacatan,San Marcos
+181,182,Catarina,San Marcos
+182,183,Ayutla,San Marcos
+183,184,Ocos,San Marcos
+184,185,San Pablo,San Marcos
+185,186,El Quetzal,San Marcos
+186,187,La Reforma,San Marcos
+187,188,Pajapita,San Marcos
+188,189,Ixchiguan,San Marcos
+189,190,San Jose Ojetenam,San Marcos
+190,191,San Cristobal Cucho,San Marcos
+191,192,Sipacapa,San Marcos
+192,193,Esquipulas Palo Gordo,San Marcos
+193,194,Rio Blanco,San Marcos
+194,195,San Lorenzo,San Marcos
+195,196,La Blanca,San Marcos
+196,197,Huehuetenango,Huehuetenango
+197,198,Chiantla,Huehuetenango
+198,199,Malacatancito,Huehuetenango
+199,200,Cuilco,Huehuetenango
+200,201,Nenton,Huehuetenango
+201,202,San Pedro Necta,Huehuetenango
+202,203,Jacaltenango,Huehuetenango
+203,204,San Pedro Soloma,Huehuetenango
+204,205,San Ildefonso Ixtahuacan,Huehuetenango
+205,206,Santa Barbara,Huehuetenango
+206,207,La Libertad,Huehuetenango
+207,208,La Democracia,Huehuetenango
+208,209,San Miguel Acatan,Huehuetenango
+209,210,San Rafael La Independencia,Huehuetenango
+210,211,Todos Santos Cuchumatan,Huehuetenango
+211,212,San Juan Atitan,Huehuetenango
+212,213,Santa Eulalia,Huehuetenango
+213,214,San Mateo Ixtatan,Huehuetenango
+214,215,Colotenango,Huehuetenango
+215,216,San Sebastian Huehuetenango,Huehuetenango
+216,217,Tectitan,Huehuetenango
+217,218,Concepcion Huista,Huehuetenango
+218,219,San Juan Ixcoy,Huehuetenango
+219,220,San Antonio Huista,Huehuetenango
+220,221,San Sebastian Coatan,Huehuetenango
+221,222,Barillas,Huehuetenango
+222,223,Aguacatan,Huehuetenango
+223,224,San Rafael Petzal,Huehuetenango
+224,225,San Gaspar Ixchil,Huehuetenango
+225,226,Santiago Chimaltenango,Huehuetenango
+226,227,Santa Ana Huista,Huehuetenango
+227,228,Union Cantinil,Huehuetenango
+228,229,Petatan,Huehuetenango
+229,230,Santa Cruz Del Quiche,Quiche
+230,231,Chiche,Quiche
+231,232,Chinique,Quiche
+232,233,Zacualpa,Quiche
+233,234,Chajul,Quiche
+234,235,Chichicastenango,Quiche
+235,236,Patzite,Quiche
+236,237,San Antonio Ilotenango,Quiche
+237,238,San Pedro Jocopilas,Quiche
+238,239,Cunen,Quiche
+239,240,San Juan Cotzal,Quiche
+240,241,Joyabaj,Quiche
+241,242,Nebaj,Quiche
+242,243,San Andres Sajcabaja,Quiche
+243,244,Uspantan,Quiche
+244,245,Sacapulas,Quiche
+245,246,San Bartolome Jocotenango,Quiche
+246,247,Canilla,Quiche
+247,248,Chicaman,Quiche
+248,249,Ixcan,Quiche
+249,250,Pachalum,Quiche
+250,251,Salama,Baja Verapaz
+251,252,San Miguel Chicaj,Baja Verapaz
+252,253,Rabinal,Baja Verapaz
+253,254,Cubulco,Baja Verapaz
+254,255,Granados,Baja Verapaz
+255,256,El Chol,Baja Verapaz
+256,257,San Jeronimo,Baja Verapaz
+257,258,Purulha,Baja Verapaz
+258,259,Coban,Alta Verapaz
+259,260,Santa Cruz Verapaz,Alta Verapaz
+260,261,San Cristobal Verapaz,Alta Verapaz
+261,262,Tactic,Alta Verapaz
+262,263,Tamahu,Alta Verapaz
+263,264,Tucuru,Alta Verapaz
+264,265,Panzos,Alta Verapaz
+265,266,Senahu,Alta Verapaz
+266,267,San Pedro Carcha,Alta Verapaz
+267,268,San Juan Chamelco,Alta Verapaz
+268,269,Lanquin,Alta Verapaz
+269,270,Cahabon,Alta Verapaz
+270,271,Chisec,Alta Verapaz
+271,272,Chahal,Alta Verapaz
+272,273,Fray Bartolome De Las Casas,Alta Verapaz
+273,274,Santa Catalina La Tinta,Alta Verapaz
+274,275,Raxruha,Alta Verapaz
+275,276,Flores,Peten
+276,277,San Jose,Peten
+277,278,San Benito,Peten
+278,279,San Andres,Peten
+279,280,La Libertad,Peten
+280,281,San Francisco,Peten
+281,282,Santa Ana,Peten
+282,283,Dolores,Peten
+283,284,San Luis,Peten
+284,285,Sayaxche,Peten
+285,286,Melchor De Mencos,Peten
+286,287,Poptun,Peten
+287,288,Las Cruces,Peten
+288,289,El Chal,Peten
+289,290,Puerto Barrios,Izabal
+290,291,Livingston,Izabal
+291,292,El Estor,Izabal
+292,293,Morales,Izabal
+293,294,Los Amates,Izabal
+294,295,Zacapa,Zacapa
+295,296,Estanzuela,Zacapa
+296,297,Rio Hondo,Zacapa
+297,298,Gualan,Zacapa
+298,299,Teculutan,Zacapa
+299,300,Usumatlan,Zacapa
+300,301,Cabañas,Zacapa
+301,302,San Diego,Zacapa
+302,303,La Union,Zacapa
+303,304,Huite,Zacapa
+304,305,San Jorge,Zacapa
+305,306,Chiquimula,Chiquimula
+306,307,San Jose La Arada,Chiquimula
+307,308,San Juan Ermita,Chiquimula
+308,309,Jocotan,Chiquimula
+309,310,Camotan,Chiquimula
+310,311,Olopa,Chiquimula
+311,312,Esquipulas,Chiquimula
+312,313,Concepcion Las Minas,Chiquimula
+313,314,Quezaltepeque,Chiquimula
+314,315,San Jacinto,Chiquimula
+315,316,Ipala,Chiquimula
+316,317,Jalapa,Jalapa
+317,318,San Pedro Pinula,Jalapa
+318,319,San Luis Jilotepeque,Jalapa
+319,320,San Manuel Chaparron,Jalapa
+320,321,San Carlos Alzatate,Jalapa
+321,322,Monjas,Jalapa
+322,323,Mataquescuintla,Jalapa
+323,324,Jutiapa,Jutiapa
+324,325,El Progreso,Jutiapa
+325,326,Santa Catarina Mita,Jutiapa
+326,327,Agua Blanca,Jutiapa
+327,328,Asuncion Mita,Jutiapa
+328,329,Yupiltepeque,Jutiapa
+329,330,Atescatempa,Jutiapa
+330,331,Jerez,Jutiapa
+331,332,El Adelanto,Jutiapa
+332,333,Zapotitlan,Jutiapa
+333,334,Comapa,Jutiapa
+334,335,Jalpatagua,Jutiapa
+335,336,Conguaco,Jutiapa
+336,337,Moyuta,Jutiapa
+337,338,Pasaco,Jutiapa
+338,339,San Jose Acatempa,Jutiapa
+339,340,Quesada,Jutiapa

@@ -1,26 +1,21 @@
+DROP DATABASE inguat;
 CREATE DATABASE inguat;
 use inguat;
 
-CREATE TABLE municipio(
-	 id int NOT null ,
-	 nombre varchar(200) NOT NULL,
-	 PRIMARY KEY (id)
-);
+
 -- tabla departamento
 CREATE TABLE departamento(
 	 id int NOT null ,
 	 nombre varchar(200) NOT NULL,
 	 PRIMARY KEY (id)
 );
--- tabla tipo ubicacion (digamos que relacion municipio y departamento ...)
--- tabla de ubicacion
-CREATE table ubicacion(
-	id int not null auto_increment,
-	id_municipio int not null,
-	id_departamento  int not null,
-	primary key(id),
-	FOREIGN KEY (id_municipio) REFERENCES municipio(id),
-	FOREIGN KEY (id_departamento) REFERENCES departamento(id)
+
+CREATE TABLE municipio(
+	 id int NOT null ,
+	 nombre varchar(200) NOT NULL,
+	 id_departamento int not null,
+	 PRIMARY KEY (id), 
+	 foreign key(id_departamento) references inguat.departamento(id)
 );
 
 -- tabla de escuelas de espaniol
@@ -33,7 +28,7 @@ CREATE table escuelas(
 	sitio_web  text,
 	id_ubicacion int not null,
 	primary key(id),
-	FOREIGN KEY (id_ubicacion) REFERENCES ubicacion(id)
+	FOREIGN KEY (id_ubicacion) REFERENCES municipio(id)
 );
 
 -- **********************************
@@ -83,7 +78,7 @@ CREATE table hotel(
 	FOREIGN KEY (id_tarifas) REFERENCES tarifas(id),
 	FOREIGN KEY (id_habitaciones) REFERENCES habitaciones(id),
 	FOREIGN KEY (id_clasificacion) REFERENCES clasificacion(id),
-	FOREIGN KEY (id_ubicacion) REFERENCES ubicacion(id)
+	FOREIGN KEY (id_ubicacion) REFERENCES municipio(id)
 );
 
 
@@ -113,7 +108,7 @@ CREATE table Guia(
 	id_ubicacion int not null,
 	primary key(carnet),
 	FOREIGN KEY (id_tipo) REFERENCES tipoGuia(id),
-	FOREIGN KEY (id_ubicacion) REFERENCES ubicacion(id)
+	FOREIGN KEY (id_ubicacion) REFERENCES municipio(id)
 );
 
 
@@ -149,7 +144,7 @@ CREATE table agencia(
 	id_ubicacion int not null,
 	primary key(id),
 	FOREIGN KEY (id_tipo) REFERENCES clasificaion_agencia(id),
-	FOREIGN KEY (id_ubicacion) REFERENCES ubicacion(id)
+	FOREIGN KEY (id_ubicacion) REFERENCES municipio(id)
 );
 
 -- tabla de guias que trabajan en agencias
@@ -202,7 +197,7 @@ CREATE table transporte(
 	primary key(id),
 	FOREIGN KEY (id_tipoTransporte) REFERENCES tipoTransporte(id),
 	FOREIGN KEY (id_categoriaViaje) REFERENCES categoriaViaje(id),
-	FOREIGN KEY (id_ubicacion) REFERENCES ubicacion(id)
+	FOREIGN KEY (id_ubicacion) REFERENCES municipio(id)
 );
 
 -- tabla de viajes 
@@ -213,8 +208,8 @@ CREATE table viajes(
 	id_transporte int not null,
 	primary key(id),
 	FOREIGN KEY (id_transporte) REFERENCES transporte(id),
-	FOREIGN KEY (ubicacionInicio) REFERENCES ubicacion(id),
-	FOREIGN KEY (ubicacionFin) REFERENCES ubicacion(id)
+	FOREIGN KEY (ubicacionInicio) REFERENCES municipio(id),
+	FOREIGN KEY (ubicacionFin) REFERENCES municipio(id)
 );
 
 -- tabla de horarios
@@ -251,7 +246,7 @@ CREATE TABLE diaMercado(
 	 id_ubicacion int not null,
 	 PRIMARY KEY (id),
 	 FOREIGN KEY (id_dia) REFERENCES dia(id),
-	 FOREIGN KEY (id_ubicacion) REFERENCES ubicacion(id)
+	 FOREIGN KEY (id_ubicacion) REFERENCES municipio(id)
 );
 
 -- FERIAS PATRONALES
@@ -260,7 +255,7 @@ CREATE TABLE feriaPatronal(
 	 dia varchar(150) not null,
 	 id_ubicacion int not null,
 	 PRIMARY KEY (id),
-	 FOREIGN KEY (id_ubicacion) REFERENCES ubicacion(id)
+	 FOREIGN KEY (id_ubicacion) REFERENCES municipio(id)
 );
 
 

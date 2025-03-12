@@ -1,4 +1,3 @@
-creacion.sql
 
 INSERT INTO `municipio` (`id`, `Etiqueta`) VALUES
 (0, 'varios'),
@@ -9032,9 +9031,7 @@ INSERT INTO `hotel` (`id`, `nombre`, `direccion`, `telefono`, `correo`, `sitio_w
 (4, 'ALCAZAR DE DOÑA VICTORIA', '1A. AVENIDA, 5-34 ZONA 1', '7952-1143, 7952-1388', 'recepcion@hotelescoban.com;brendachenal@gmail.com', 'www.hotelescoban.com', 4, 4, NULL, 414),
 (5, 'CASA DON DIEGO HOTEL BOUTIQUE', '5A. AVENIDA 3-36 ZONA 3', '7951-3520', 'manleonoeramirez@gmail.com', '', 5, 5, NULL, 415),
 (6, 'CASA DURANTA', '3A. CALLE, 4-46 ZONA 3', '7951-4188  Y  5122-2350 (WHATSAPP)', 'hotelduranta2014@gmail.com; info@casadurnat.com', 'www.casaduranta.com  -  fb: hotel casa duranta', 6, 6, NULL, 416),
-(7, 'CASA GAIA', '11 AVENIDA 11-97 ZONA 10 BARRIO SAN JORGE', '7941-7021,    7728-1376', 'info@hotelcasagaia.com      casa.gaia.gt@gmail.com', 'www.hotelcas
-
-agaia.com', 7, 7, NULL, 417),
+(7, 'CASA GAIA', '11 AVENIDA 11-97 ZONA 10 BARRIO SAN JORGE', '7941-7021,    7728-1376', 'info@hotelcasagaia.com      casa.gaia.gt@gmail.com', 'www.hotelcasagaia.com', 7, 7, NULL, 417),
 (8, 'CASA KIRVÁ', 'KILOMETRO 204.4, RUTA HACIA COBAN ALDEA TONTEM, FRENTE A LA BUGA', '4693-4800', 'info@casakirva.com', '', 8, 8, NULL, 418),
 (9, 'CASA Q´EQCHI', '4A. CALLE, 7-29 ZONA 3 SAN JUAN ACALA', '7951-4625,    3295-9169', 'info@hotelencoban.com', 'www.hotelencoban.com         fb: hotel en coban', 9, 9, NULL, 419),
 (10, 'D\'ROSALES', '1A. AVENIDA 5-50 ZONA 12 LOTIFICACION CARLOS V', '7736-7397 -  5476-9890', 'salberosales@gmail.com', '', 10, 10, NULL, 420),
@@ -12159,9 +12156,7 @@ INSERT INTO `agencia` (`id`, `nombre`, `direccion`, `telefono`, `correo`, `sitio
 (56, 'PACIFIC FINS GUATEMALA', 'CALLEJON MOLINA SUR LOTE 22 Zona 00 ALDEA BUENA VISTA', '7881-4788', 'niels@pacificfins.com.gt', 'www.pacificfins.com.gt', 1, 2373),
 (57, 'MEGA TRAVEL EXPRESS', 'CASA # 9 RESIDENCIAL LAS VICTORIAS SECTOR 63,', '4629-1202', 'megatravelexpress@hotmail.com', 'www.megatraelexpres.com.gt', 3, 2374),
 (58, 'DECISIVE', 'PLATAFORMA 1 CASA #10 Zona 3 URBANIZACION LIKIN, PUERTO DE SAN JOSE', '5757-7617; 7880-4152', 'lodge.host@guatbilladv.com', '', 1, 2375),
-(59, 'FINS´N FEATHERS CASA VIEJA LODGE', 'KILOMETRO 108.5, CARRETERA AL PUERTO DE SAN JOSÉ ALDEA SANTA ROSA', '7881-1705', 'info@casaviejalodge.com', '', 1, 
-
-2376),
+(59, 'FINS´N FEATHERS CASA VIEJA LODGE', 'KILOMETRO 108.5, CARRETERA AL PUERTO DE SAN JOSÉ ALDEA SANTA ROSA', '7881-1705', 'info@casaviejalodge.com', '', 1, 2376),
 (60, 'SPORT FISHING IN GUATEMALA', 'CALLEJON 4 LOTE 31 COL. STA. CECILIA, FRENTE A IGLESIA LOS MORMONES', '3985-4592', 'sportfishinginguatemala@gmail.com', '', 1, 2377),
 (61, 'TOUR OPERADORA VISION Y CONOCIMIENTO', 'CALLE PRINCIPAL, LOTE 49-B ALDEA SANTA ROSA, KILOMETRO 108', '5286-6694', 'jc@vctours.com', '', 1, 2378),
 (62, 'AGENCIA DE VIAJES SOL TRAVEL', '2A. AVENIDA NORTE 1-22 Zona 1', '7882-5401 Y 5078-1214', 'viajeserica@hotmail.com', '', 3, 2379),
@@ -16318,9 +16313,7 @@ INSERT INTO `transporte` (`id`, `nombre`, `telefono`, `correo`, `id_tipoTranspor
 (724, 'CONTRATACIONES Y SERVICIOS CONSOLIDADOS \"COSERCO\"', '54127624', 'elcoserco@gmail.com', 2, 2, 4125),
 (725, 'GUATEMALAN GUIDE', '5575-2200', 'carlos@guatemalanguide.com', 2, 2, 4126),
 (726, 'HUNAPU TOURS', '48871263', 'hunaputourscv@gmail.com', 1, 2, 4127),
-(727, 'MULTISERVICIOS GONZALEZ ', '56964242-45223319', '', 2, 2
-
-, 4128),
+(727, 'MULTISERVICIOS GONZALEZ ', '56964242-45223319', '', 2, 2, 4128),
 (728, 'SERVICIOS TURISTICOS ENTRE VOLCANES', '41505636', '', 2, 2, 4129),
 (729, 'SERVICIOS TURISTICOS STAR TOURS', '57255630, 78887875', 'jcnunez.startours@hotmail.com', 2, 1, 4130),
 (730, 'TOURS MAYAN TRADITIONS', '30087390, 78323766', 'tradicionesmayas@hotmail.com', 1, 2, 4131),
@@ -19765,8 +19758,8 @@ INSERT INTO `feriaPatronal` (`id`, `dia`, `id_ubicacion`) VALUES
 (39, 'Octubre 4', 4496),
 (40, 'Junio 29', 4497),
 (41, 'Octubre 12', 4498),
-(42, 'Diciembre 8 ', 4499),
-(43, 'Agosto 15 ', 4500),
+(42, 'Diciembre 8 ', 4499),
+(43, 'Agosto 15 ', 4500),
 (44, 'Febrero 25', 4501),
 (45, 'Enero 15 y Julio 25', 4502),
 (46, 'Enero 23', 4503),
@@ -21778,4 +21771,3 @@ INSERT INTO `supervisor_Area` (`id`, `id_supervisor`, `id_area`) VALUES
 (298, 116, 253),
 (299, 254, 31),
 (300, 273, 310);
-
