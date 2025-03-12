@@ -1,0 +1,291 @@
+% Creating a simple Title Page in Beamer
+\documentclass[spanish]{beamer}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+
+\usetikzlibrary{er,positioning}
+
+% Theme choice:
+\usetheme{AnnArbor}
+
+% Title page details: 
+\title{Clase 2}
+\author{Alexis Ovalle}
+\date{\today}
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Indice}
+\tableofcontents
+\end{frame}
+
+\section{Consultas complejas}
+
+
+
+% FRAME 2 - GROUP BY y HAVING
+\begin{frame}{GROUP BY y HAVING}
+    \begin{itemize}
+        \item \textbf{GROUP BY}: Agrupa resultados según una o más columnas.
+        \item \textbf{HAVING}: Filtra los grupos resultantes de un GROUP BY.
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Ejemplo:}
+    \begin{verbatim}
+SELECT departamento, COUNT(*) AS empleados
+FROM empleados
+GROUP BY departamento
+HAVING COUNT(*) > 10;
+    \end{verbatim}
+\end{frame}
+
+% FRAME 3 - BETWEEN
+\begin{frame}{BETWEEN}
+    \begin{itemize}
+        \item Sirve para establecer un rango en la condición de búsqueda.
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Ejemplo:}
+    \begin{verbatim}
+SELECT * FROM productos
+WHERE precio BETWEEN 100 AND 500;
+    \end{verbatim}
+\end{frame}
+
+% FRAME 4 - ORDER BY
+\begin{frame}{ORDER BY}
+    \begin{itemize}
+        \item Ordena los resultados en forma ascendente (ASC) o descendente (DESC).
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Ejemplo:}
+    \begin{verbatim}
+SELECT nombre, salario
+FROM empleados
+ORDER BY salario DESC;
+    \end{verbatim}
+\end{frame}
+
+% FRAME 5 - JOINS
+\begin{frame}{JOINS (INNER, LEFT, RIGHT, FULL)}
+    \begin{itemize}
+        \item \textbf{INNER JOIN}: Devuelve solo los registros que coinciden en ambas tablas.
+        \item \textbf{LEFT JOIN}: Todos los registros de la tabla izquierda y las coincidencias de la derecha.
+        \item \textbf{RIGHT JOIN}: Al revés del LEFT JOIN.
+        \item \textbf{FULL JOIN}: Combina LEFT y RIGHT JOIN.
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Ejemplo INNER JOIN:}
+    \begin{verbatim}
+SELECT empleados.nombre, departamentos.nombre
+FROM empleados
+INNER JOIN departamentos
+ON empleados.id_departamento = departamentos.id;
+    \end{verbatim}
+\end{frame}
+
+% FRAME 6 - SUBCONSULTAS
+\begin{frame}{Subconsultas (Subqueries)}
+    \begin{itemize}
+        \item Consultas anidadas dentro de otras consultas.
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Ejemplo:}
+    \begin{verbatim}
+SELECT nombre, salario
+FROM empleados
+WHERE salario > (
+    SELECT AVG(salario)
+    FROM empleados
+);
+    \end{verbatim}
+\end{frame}
+
+% FRAME 7 - EXISTS y NOT EXISTS
+\begin{frame}{EXISTS y NOT EXISTS}
+    \begin{itemize}
+        \item \textbf{EXISTS}: Verifica si una subconsulta devuelve algún registro.
+        \item \textbf{NOT EXISTS}: Lo contrario.
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Ejemplo:}
+    \begin{verbatim}
+SELECT nombre
+FROM clientes c
+WHERE EXISTS (
+    SELECT 1
+    FROM pedidos p
+    WHERE p.id_cliente = c.id
+);
+    \end{verbatim}
+\end{frame}
+
+% FRAME 8 - CASE
+\begin{frame}{CASE}
+    \begin{itemize}
+        \item Permite realizar condiciones en la cláusula SELECT o en filtros.
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Ejemplo:}
+    \begin{verbatim}
+SELECT nombre,
+    CASE
+        WHEN salario > 50000 THEN 'Alto'
+        WHEN salario BETWEEN 30000 AND 50000 THEN 'Medio'
+        ELSE 'Bajo'
+    END AS categoria_salario
+FROM empleados;
+    \end{verbatim}
+\end{frame}
+
+% FRAME 9 - UNION y UNION ALL
+\begin{frame}{UNION y UNION ALL}
+    \begin{itemize}
+        \item \textbf{UNION}: Combina los resultados de dos consultas eliminando duplicados.
+        \item \textbf{UNION ALL}: Incluye duplicados.
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Ejemplo:}
+    \begin{verbatim}
+SELECT nombre FROM clientes
+UNION
+SELECT nombre FROM proveedores;
+    \end{verbatim}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECCIÓN 2 %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECCIÓN 2 %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Data Science}
+
+% FRAME 1 - ¿Qué es Pandas?
+\begin{frame}{¿Qué es Pandas?}
+    \begin{itemize}
+        \item \textbf{Pandas} es una librería de Python esencial para el análisis y manipulación de datos estructurados.
+        \item Permite trabajar con datos de una manera muy flexible, ofreciendo herramientas tanto para datos unidimensionales como bidimensionales.
+        \item Las dos estructuras principales de Pandas son:
+        \begin{itemize}
+            \item \textbf{Series}: Se trata de un objeto unidimensional similar a un vector de Numpy, útil para almacenar datos de una sola columna.
+            \item \textbf{DataFrames}: Estructura bidimensional que organiza datos en filas y columnas, similar a una tabla en SQL o una hoja de cálculo en Excel.
+        \end{itemize}
+        \item Es una librería extremadamente popular en el campo de la \textit{Data Science}, \textit{Machine Learning}, y \textit{ETL (Extract, Transform, Load)}.
+    \end{itemize}
+\end{frame}
+
+% FRAME 2 - Carga de Datos
+\begin{frame}{Carga de Datos}
+    \begin{itemize}
+        \item Una de las primeras tareas al trabajar con datos es cargarlos desde diversas fuentes.
+        \item Pandas ofrece funciones que permiten leer y escribir datos en varios formatos:
+        \begin{itemize}
+            \item \textbf{CSV}: Un formato muy común para almacenar datos tabulares, ideal para exportar e importar datos.
+            \item \textbf{Excel}: Pandas puede leer archivos Excel con varias hojas, lo que facilita el trabajo con grandes volúmenes de datos.
+            \item \textbf{JSON}: Utilizado cuando los datos están organizados en formato jerárquico o en objetos.
+            \item \textbf{SQL}: Permite leer datos directamente desde bases de datos SQL, facilitando la integración con otras plataformas de datos.
+        \end{itemize}
+        \item Algunos ejemplos básicos de carga de datos con Pandas:
+        \begin{itemize}
+            \item \textbf{CSV:}
+            \begin{itemize}
+                \item \texttt{df = pd.read\_csv('archivo.csv')}
+            \end{itemize}
+            \item \textbf{Excel:}
+            \begin{itemize}
+                \item \texttt{df = pd.read\_excel('archivo.xlsx')}
+            \end{itemize}
+            \item \textbf{JSON:}
+            \begin{itemize}
+                \item \texttt{df = pd.read\_json('archivo.json')}
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+% FRAME 3 - Inspección de Datos
+\begin{frame}{Inspección de Datos}
+    \begin{itemize}
+        \item Una vez que los datos están cargados, es crucial inspeccionarlos para entender su estructura.
+        \item Algunas funciones útiles de Pandas para inspeccionar los datos:
+        \begin{itemize}
+            \item \textbf{df.head()}: Muestra las primeras 5 filas del DataFrame.
+            \item \textbf{df.tail()}: Muestra las últimas 5 filas.
+            \item \textbf{df.info()}: Proporciona información detallada sobre el DataFrame, como tipos de datos y valores nulos.
+            \item \textbf{df.describe()}: Calcula estadísticas descriptivas como la media, mediana, desviación estándar, etc.
+            \item \textbf{df.shape}: Devuelve las dimensiones del DataFrame (número de filas y columnas).
+        \end{itemize}
+        \item Estas funciones nos permiten obtener rápidamente una visión general de la calidad y estructura de los datos.
+    \end{itemize}
+\end{frame}
+
+% FRAME 4 - Limpieza de Datos
+\begin{frame}{Limpieza de Datos}
+    \begin{itemize}
+        \item La limpieza de datos es una parte fundamental de cualquier proyecto de \textit{Data Science}, ya que la calidad de los datos influye directamente en los resultados obtenidos.
+        \item Algunos de los pasos más comunes en la limpieza de datos incluyen:
+        \begin{itemize}
+            \item \textbf{Manejo de valores nulos}: Detectar y manejar valores faltantes es esencial para evitar errores en el análisis. Se pueden eliminar o rellenar con un valor.
+            \item \textbf{Eliminación de duplicados}: Detectar registros duplicados para mantener la calidad y exactitud de los datos.
+            \item \textbf{Conversión de tipos de datos}: Asegurarse de que las columnas tengan el tipo de dato adecuado (por ejemplo, convertir una columna de texto que contiene fechas en un tipo \texttt{datetime}).
+        \end{itemize}
+        \item Algunos ejemplos de funciones de limpieza en Pandas:
+        \begin{itemize}
+            \item \textbf{Valores nulos:}
+            \begin{itemize}
+                \item \texttt{df.isnull().sum()} - Verifica la cantidad de valores nulos en cada columna.
+                \item \texttt{df.dropna(inplace=True)} - Elimina filas con valores nulos.
+                \item \texttt{df.fillna(0, inplace=True)} - Rellena valores nulos con un valor específico (como 0).
+            \end{itemize}
+            \item \textbf{Duplicados:}
+            \begin{itemize}
+                \item \texttt{df.duplicated().sum()} - Cuenta los registros duplicados.
+                \item \texttt{df.drop\_duplicates(inplace=True)} - Elimina filas duplicadas.
+            \end{itemize}
+            \item \textbf{Conversión de tipos:}
+            \begin{itemize}
+                \item \texttt{df['columna'] = df['columna'].astype(float)} - Convierte una columna a tipo \texttt{float}.
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+% FRAME 5 - Selección y Filtrado de Datos
+\begin{frame}{Selección y Filtrado de Datos}
+    \begin{itemize}
+        \item Una de las tareas más frecuentes es seleccionar y filtrar los datos según ciertas condiciones.
+        \item Con Pandas, se pueden seleccionar columnas, filas y filtrar datos de manera eficiente.
+        \item Algunas técnicas comunes de selección y filtrado:
+        \begin{itemize}
+            \item \textbf{Selección de columnas}: Para obtener una o varias columnas de datos.
+            \item \textbf{Filtrado de filas}: Para seleccionar filas que cumplan con ciertas condiciones (por ejemplo, valores mayores o menores a un umbral).
+            \item \textbf{Selección basada en etiquetas y posiciones}: Usando \texttt{loc} para etiquetas y \texttt{iloc} para posiciones numéricas.
+        \end{itemize}
+        \item Ejemplos de filtrado:
+        \begin{itemize}
+            \item Filtrado por condiciones simples:
+            \begin{itemize}
+                \item \texttt{df[df['edad'] > 30]}
+            \end{itemize}
+            \item Filtrado por condiciones compuestas:
+            \begin{itemize}
+                \item \texttt{df[(df['edad'] > 30) \& (df['pais'] == 'México')]}
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\end{document}
