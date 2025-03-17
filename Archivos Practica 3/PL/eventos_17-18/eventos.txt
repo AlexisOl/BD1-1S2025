@@ -1,0 +1,6 @@
+https://github.com/koenvo/wyscout-soccer-match-event-dataset/tree/main/processed-v2
+
+
+
+Use los datos solo de la liga inglesa del periodo 17-18, especificamente para los indicadores de coordenada de eventos
+
