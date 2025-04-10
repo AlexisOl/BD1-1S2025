@@ -1,0 +1,588 @@
+*** Codigo Postal
+    d_codigo:  El código postal del asentamiento.
+    d_asenta:  El nombre del asentamiento que se relaciona con el código postal.
+    d_tipo_asenta: El tipo de asentamiento que es (colonia, pueblo, unidad habitacional, etcétera).
+    D_mnpio:  El nombre del municipio al que pertenece el asentamiento y el código postal (de acuerdo con el INEGI de marzo de 2013).
+    d_estado:  El nombre del Estado o Entidad Federativa al que pertenecen el municipio, el asentamiento y el código postal (de acuerdo con el INEGI de marzo de 2013).
+    d_ciudad:  Ésta es un tanto redundante en muchos casos. Sin embargo, se refiere a la ciudad. En muchas ocasiones "ciudad" y "mnpio" son equivalentes. En otras, como en la Ciudad de México, "ciudad" y "Estado" son equivalentes. A decir verdad, poca utilidad le veo a este campo pero en muchas ocasiones se pregunta al solicitar domicilios postales en México. Sin embargo, está basado en el catálogo de SEPOMEX.
+    d_CP:  Ésta es el código postal de la Administración de Correos que reparte en el asentamiento indicado.
+    c_estado: Éste es el código del Estado. Es un número único de acuerdo con INEGI marzo 2013.
+    c_oficina:  Éste es el código de la oficina que está cerca de los códigos postales indicados. Es un tanto redundante con d_CP, aunque d_CP es un valor de texto.
+    c_CP:  A éste lo veo como un campo redundante pues, en la tabla, carece absolutamente de datos. Aquí, deduzco, debería estar en formato numérico el código postal contenido en d_codigo, pero en la tabla no tiene valor alguno.
+    c_tipo_asenta:  Aquí está el código único del asentamiento indicado en d_asenta, de acuerdo con el catálogo de SEPOMEX.
+    c_mnpio:  Aquí está el código único del Municipio por Estado indicado en d_mnpio y está de acuerdo con INEGI marzo 2013. Al tener códigos por Estado, la unicidad es únicamente en la Entidad federativa que le corresponde.
+    id_asenta_cpcons:  Éste es un identificador único del asentamiento, pero la unicidad está a nivel municipal (es decir, hay números repetidos). 
+    d_zona:  Aquí se encuentra la descripción del tipo de zona (urbana, semiurbana, rural, etcétera). No se incluye un campo c_zona con el código de la zona.
+    c_cve_ciudad:  Éste es el campo que contiene el código único de la Ciudad contenida en d_ciudad de acuerdo con el catálogo de SEPOMEX. 
+
+*** Paquetes
+    clientes:
+    id
+    nombre,cui 
+    telefonos
+
+    pedidos
+    id
+    fecha
+    personaRemitente
+    personaReceptor
+    
+
+
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    --1 FORMA NORMAL--------------------------
+
+
+    Excel - primera forma
+    clientes:
+        cui
+        nombre 
+        direccion
+
+    TelefonosClientes
+        id
+        telefono
+        cui
+
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    --2 FORMA NORMAL--------------------------
+
+    codigoPostal(
+        codigo int PK ,
+        asentamiento varchar,
+        ciudad varchar,
+        d_cp int,
+        codigo_oficina int,
+        id_asentamiento int,
+        zona varchar,
+        id_ciudad int,
+    
+        id_municipio int,
+        id_tipo_asentamiento int,
+        id_estado
+    )
+
+    tipoAsentamiento(
+        id int,
+        nombre varchar
+    );
+
+    estado(
+        id int,
+        nombre varchar
+    );
+
+    municipio (
+        id int, 
+        nombre varchar,
+        idEstado int FK
+    )
+
+    pedidos
+        id
+        fecha
+        personaRemitente
+        personaReceptor
+    
+      clientes:
+        cui
+        nombre 
+        direccion
+
+    TelefonosClientes
+        id
+        telefono
+        cui
+
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    --3 FORMA NORMAL--------------------------
+
+    codigoPostal(
+        id pk ,
+        codigo int,
+        id_asentamiento int,
+        id_oficina int,
+        zona varchar,
+    );
+    
+
+    tipoAsentamiento(
+        id int,
+        nombre varchar
+    );
+
+    estado(
+        id int,
+        nombre varchar
+    );
+
+    municipio (
+        id int, 
+        nombre varchar,
+        idEstado int FK
+    )
+
+    ciudad (
+        id int, 
+        nombre varchar,
+        id_municipio int
+    )
+
+    asentamiento (
+        id int,
+        nombre varchar,
+        id_ciudad int,
+        id_tipo_asentamiento int
+    )
+
+    oficina (
+        id int,
+        idEstado int
+    )
+
+    oficiaAsentamiento(
+        id int,
+        idOficina int,
+        idAsentamiento int,
+    )
+
+    departamentalCodigoPostal(
+        id int,
+        id_d_cp int,
+        id_oficina int
+    )
+
+
+
+    pedidos
+        id
+        fecha
+        personaRemitente
+        personaReceptor
+    
+      clientes:
+        cui
+        nombre 
+        direccion
+
+    TelefonosClientes
+        id
+        telefono
+        cui
+
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    --3.5 FORMA NORMAL ~ Boycee Codd--------------------------
+
+  zona(
+    id int,
+    tipo varchar
+  )
+
+  codigoPostal(
+        id pk ,
+        codigo int,
+        id_oficinaAsentamiento int,
+        id_zona int,
+    );
+    
+
+    tipoAsentamiento(
+        id int,
+        nombre varchar
+    );
+
+    estado(
+        id int,
+        nombre varchar
+    );
+
+    municipio (
+        id int, 
+        nombre varchar,
+        idEstado int FK
+    )
+
+    ciudad (
+        id int, 
+        nombre varchar,
+        id_municipio int
+    )
+
+    asentamiento (
+        id int,
+        nombre varchar,
+        id_ciudad int,
+        id_tipo_asentamiento int
+    )
+
+    oficina (
+        id int,
+        idEstado int
+    )
+
+    oficiaAsentamiento(
+        id int,
+        idOficina int,
+        idAsentamiento int,
+    )
+
+    departamentalCodigoPostal(
+        id int,
+        id_d_cp int,
+        id_oficina int
+    )
+
+
+
+    pedidos
+        id
+        fecha
+        personaRemitente
+        personaReceptor
+    
+      clientes:
+        cui
+        nombre 
+        direccion
+
+    TelefonosClientes
+        id
+        telefono
+        cui
+
+
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    --4 FORMA NORMAL--------------------------
+
+  zona(
+    id int,
+    tipo varchar
+  )
+
+  codigoPostal(
+        id pk ,
+        codigo int,
+        id_asentamiento int,
+        id_oficina int,
+    );
+    
+
+    tipoAsentamiento(
+        id int,
+        nombre varchar
+    );
+
+    estado(
+        id int,
+        nombre varchar
+    );
+
+    municipio (
+        id int, 
+        nombre varchar,
+        idEstado int FK
+    )
+
+    ciudad (
+        id int, 
+        nombre varchar,
+        id_municipio int
+    )
+
+    asentamiento (
+        id int,
+        nombre varchar,
+        id_ciudad int,
+        id_tipo_asentamiento int,
+        id_zona int
+    )
+
+    oficina (
+        id int,
+        idEstado int
+    )
+
+    oficiaAsentamiento(
+        id int,
+        idOficina int,
+        idAsentamiento int,
+    )
+
+    departamentalCodigoPostal(
+        id int,
+        id_d_cp int,
+        id_oficina int
+    )
+
+
+    pedidosGenerales(
+        id int,
+        fecha date,
+        precio double
+    );
+
+
+    pedidoRemitente
+        id int
+        idPedido int
+        personaRemitente int
+
+    pedidoReceptor(
+        id int 
+        idPedido int
+        personaReceptor int
+
+    )    
+      clientes:
+        cui
+        nombre 
+        direccion
+
+    TelefonosClientes
+        id
+        telefono
+        cui
+
+
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    --5 FORMA NORMAL--------------------------
+
+    zona(
+        id int,
+        tipo varchar
+    )
+
+    codigoPostalAsentamiento(
+        id int,
+        idCodigoPostal int,
+        id_asentamiento int
+    )
+    
+    codigoPostalOficina(
+                id int,
+                idCodigoPostal int,
+                id_oficina int
+    )
+
+    AsentamientoOficina(
+                id int,
+                id_oficina int,
+                id_asentamiento int
+    )
+
+    tipoAsentamiento(
+        id int,
+        nombre varchar
+    );
+
+    estado(
+        id int,
+        nombre varchar
+    );
+
+    municipio (
+        id int, 
+        nombre varchar,
+        idEstado int FK
+    )
+
+    ciudad (
+        id int, 
+        nombre varchar,
+        id_municipio int
+    )
+
+    asentamiento (
+        id int,
+        nombre varchar,
+        id_ciudad int,
+        id_tipo_asentamiento int,
+        id_zona int
+    )
+
+    oficina (
+        id int,
+        idEstado int
+    )
+
+    oficiaAsentamiento(
+        id int,
+        idOficina int,
+        idAsentamiento int,
+    )
+
+    departamentalCodigoPostal(
+        id int,
+        id_d_cp int,
+        id_oficina int
+    )
+
+
+    pedidosGenerales(
+        id int,
+        fecha date,
+        precio double
+    );
+
+
+    pedidoRemitente
+        id int
+        idPedido int
+        personaRemitente int
+
+    pedidoReceptor(
+        id int 
+        idPedido int
+        personaReceptor int
+
+    )    
+      clientes:
+        cui
+        nombre 
+        direccion
+
+    TelefonosClientes
+        id
+        telefono
+        cui
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    -------------------------------------------------------------
+    --6 FORMA NORMAL--------------------------
+
+      zona(
+        id int,
+        tipo varchar
+    )
+
+    codigoPostalAsentamiento(
+        id int,
+        idCodigoPostal int,
+        id_asentamiento int
+    )
+    
+    codigoPostalOficina(
+                id int,
+                idCodigoPostal int,
+                id_oficina int
+    )
+
+    AsentamientoOficina(
+                id int,
+                id_oficina int,
+                id_asentamiento int
+    )
+
+    tipoAsentamiento(
+        id int,
+        nombre varchar
+    );
+
+    estado(
+        id int,
+        nombre varchar
+    );
+
+    municipio (
+        id int, 
+        nombre varchar,
+        idEstado int FK
+    )
+
+    ciudad (
+        id int, 
+        nombre varchar,
+        id_municipio int
+    )
+
+    asentamientoNombre(
+        id int,
+        nombre varchar
+    );
+
+        asentamientoCiudad(
+            id int,
+            id_ciudad int
+        );
+            asentamientoTipoAsentamiento(
+                id int,
+                id_tipo_asentamiento int
+            );
+
+               asentamientoZona(
+                    id int,
+                    id_zona int
+                );
+
+
+    oficina (
+        id int,
+        idEstado int
+    )
+
+    oficiaAsentamiento(
+        id int,
+        idOficina int,
+        idAsentamientoNombre int,
+    )
+
+    departamentalCodigoPostal(
+        id int,
+        id_d_cp int,
+        id_oficina int
+    )
+
+
+    pedidosGenerales(
+        id int,
+        fecha date,
+        precio double
+    );
+
+
+    pedidoRemitente
+        id int
+        idPedido int
+        personaRemitente_clienteNombre int
+
+    pedidoReceptor(
+        id int 
+        idPedido int
+        personaReceptor_clienteNombre int
+
+    )    
+
+
+    clienteNombre(
+        cui int 
+        nombre varchar
+    )
+
+    clienteDireccion(
+        cui int 
+        direccion varchar
+    )
+
+    TelefonosClientes
+        id
+        telefono Long
+        clienteNombre int
